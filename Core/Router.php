@@ -6,6 +6,8 @@
  * Date: 20/08/2017
  * Time: 23:49
  */
+namespace MVC\Core;
+
 class Router
 {
     protected $routes = [];

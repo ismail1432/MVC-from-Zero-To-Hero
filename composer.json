@@ -1,0 +1,15 @@
+{
+  "autoload": {
+    "psr-4": {
+      "MVC\\": ""
+    }
+
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.4"
+  },
+  "require": {
+    "filp/whoops": "^2.1",
+    "symfony/yaml": "^3.3"
+  }
+}
