@@ -1,0 +1,15 @@
+/:
+    controller: Home
+    action: index
+
+posts:
+    controller: Posts
+    action: index
+
+posts/new:
+    controller: Posts
+    action: new
+
+about:
+     controller: Home
+     action: about

@@ -2,17 +2,22 @@
 //launch autoloader
 require_once('../vendor/autoload.php');
 
+//define const for file
+define('APP_ROOT',__DIR__);
+
 //DISPLAY ERRORS
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-$router = new \MVC\Core\Router();
+$router = new \MVC\Core\Router\Router();
 
-$router->add('',['controller'=>'Home', 'action'=>'index']);
-$router->add('posts',['controller'=>'Posts', 'action'=>'index']);
-$router->add('posts/new',['controller'=>'Posts', 'action'=>'new']);
 
-echo '<pre>';
-die(print_r($router->getRoutes()));
-echo '<pre>';
+$url = $_SERVER['QUERY_STRING'];
+echo "URL : $url";
+echo "<br>";
+$router->match($url);
+
+    print_r($router->getParams());
+
+
